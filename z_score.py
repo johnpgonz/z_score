@@ -92,7 +92,7 @@ def test_z_score_function():
 # participated in the group assignment work           #
 #######################################################
 
-def z_score(x, mu=mean(x), sigma=stdev(x, mu)):
+def z_score(x, mu, sigma):
     """
     x is the population item    
     mu is the population mean
