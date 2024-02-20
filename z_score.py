@@ -1,17 +1,5 @@
 # z-score formula  z = (x - mu)/ sigma
 
-# As a starting point, you will have a Python script that calculates mu and sigma
-# and  for three different predefined data sets.
-
-
-# starter code:
-
-def gate_and(input1, input2):
-    """ an AND gate (input1 ^ input2) """
-    gate1 = input1 and input2
-    return bool(gate1)
-                
-
 # Homework 3: Z-Score Python Script (Group Homework)
 
 #################
@@ -104,23 +92,20 @@ def test_z_score_function():
 # participated in the group assignment work           #
 #######################################################
 
-def z_score(x, mu, sigma):
+def z_score(x, mu=mean(x), sigma=stdev(x, mu)):
     """
-    x is the population item
+    x is the population item    
     mu is the population mean
     sigma is the population standard deviation
-    
     Returns the z-score of x
     """
-    
     # Participating group member names go in this comment
     # Elliot Lee
     # John Gonzalez
     # Jakob Poore
-    
     # Your code goes between this comment and the return
+    z = (x - mu)/sigma
+    return z # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
 
-    return # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
 
-# We can probably call the mean function to get the mu like this:  z_score(x, mean(x), sigma)
    
