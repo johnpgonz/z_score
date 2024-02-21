@@ -107,5 +107,36 @@ def z_score(x, mu, sigma):
     z = (x - mu)/sigma
     return z # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
 
+# TESTING: 
+def test_case(pop):
+    """Generic test function that takes in population data set and prints the mean, least element, and greatest element z-scores
+    for that population"""
+    pop_mean = mean(pop)
+    pop_sd = stdev(pop, pop_mean)
+    pop_least = least(pop)
+    pop_greatest = greatest(pop)
+    mean_zscore = z_score(pop_mean, pop_mean, pop_sd)
+    least_zscore = z_score(pop_least, pop_mean, pop_sd)
+    greatest_zscore = z_score(pop_greatest, pop_mean, pop_sd)
+    print(f"""For this population: {pop}
+The z-score of the mean of is:  {mean_zscore}.
+The z-score of the least is:  {least_zscore}
+The z-score of the greatest of is:  {greatest_zscore}.\n""")
 
-   
+test_case(population1)
+test_case(population2)
+test_case(population3)
+
+"""test_case results:
+ The z-score of the mean of [14, 28, 96, 97, 21, 29, 29, 4, 58, 42, 25, 97, 49, 33, 75, 53, 14, 53, 45, 87, 75, 66, 62, 55, 57, 44, 44, 94, 19, 96, 12, 59, 86, 88, 61, 68, 37, 64, 19, 46, 68, 98, 19, 54, 65, 30, 1, 82, 76, 3] is:  0.0.
+ The z-score of the least of [14, 28, 96, 97, 21, 29, 29, 4, 58, 42, 25, 97, 49, 33, 75, 53, 14, 53, 45, 87, 75, 66, 62, 55, 57, 44, 44, 94, 19, 96, 12, 59, 86, 88, 61, 68, 37, 64, 19, 46, 68, 98, 19, 54, 65, 30, 1, 82, 76, 3] is:  -1.821218998013061.
+ The z-score of the greatest of [14, 28, 96, 97, 21, 29, 29, 4, 58, 42, 25, 97, 49, 33, 75, 53, 14, 53, 45, 87, 75, 66, 62, 55, 57, 44, 44, 94, 19, 96, 12, 59, 86, 88, 61, 68, 37, 64, 19, 46, 68, 98, 19, 54, 65, 30, 1, 82, 76, 3] is:  1.6467480771197802.
+
+ The z-score of the mean of [-16, 10, -15, -6, -5, -20, -11, 9, -9, -7, 5, -14, 6, -10, -22, -19, 21, 11, -18, -13, -24, -21, 14, 19, 20, 13, 16, 8, 4, 3, 18, 22, 17, 7, -12, -3, 23, -8, 2, -2, -4, 1, 12, -25, -1, 15, 0, -23, -17, 24] is:  0.0.
+ The z-score of the least of [-16, 10, -15, -6, -5, -20, -11, 9, -9, -7, 5, -14, 6, -10, -22, -19, 21, 11, -18, -13, -24, -21, 14, 19, 20, 13, 16, 8, 4, 3, 18, 22, 17, 7, -12, -3, 23, -8, 2, -2, -4, 1, 12, -25, -1, 15, 0, -23, -17, 24] is:  -1.697749375254331.
+ The z-score of the greatest of [-16, 10, -15, -6, -5, -20, -11, 9, -9, -7, 5, -14, 6, -10, -22, -19, 21, 11, -18, -13, -24, -21, 14, 19, 20, 13, 16, 8, 4, 3, 18, 22, 17, 7, -12, -3, 23, -8, 2, -2, -4, 1, 12, -25, -1, 15, 0, -23, -17, 24] is:  1.697749375254331.
+
+ The z-score of the mean of [125, 475, 275, 550, 350, 325, 575, 25, 225, 150, 425, 75, 175, 650, 600, 625, 675, 250, 100, 0, 375, 500, 400, 450, 300, 525, 50, 200] is:  0.0.
+ The z-score of the least of [125, 475, 275, 550, 350, 325, 575, 25, 225, 150, 425, 75, 175, 650, 600, 625, 675, 250, 100, 0, 375, 500, 400, 450, 300, 525, 50, 200] is:  -1.6712580435934667.
+ The z-score of the greatest of [125, 475, 275, 550, 350, 325, 575, 25, 225, 150, 425, 75, 175, 650, 600, 625, 675, 250, 100, 0, 375, 500, 400, 450, 300, 525, 50, 200] is:  1.6712580435934667. 
+ """
