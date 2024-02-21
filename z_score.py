@@ -107,7 +107,7 @@ def z_score(x, mu, sigma):
     z = (x - mu)/sigma
     return z # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
 
-# TESTING: 
+# Testing z_score script with all three populations and multiple uses cases: 
 def test_case(pop):
     """Generic test function that takes in population data set and prints the mean, least element, and greatest element z-scores
     for that population"""
@@ -119,9 +119,9 @@ def test_case(pop):
     least_zscore = z_score(pop_least, pop_mean, pop_sd)
     greatest_zscore = z_score(pop_greatest, pop_mean, pop_sd)
     print(f"""For this population: {pop}
-The z-score of the mean of is:  {mean_zscore}.
+The z-score of the mean is:  {mean_zscore}.
 The z-score of the least is:  {least_zscore}
-The z-score of the greatest of is:  {greatest_zscore}.\n""")
+The z-score of the greatest is:  {greatest_zscore}.\n""")
 
 test_case(population1)
 test_case(population2)
