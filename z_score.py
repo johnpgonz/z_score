@@ -105,6 +105,14 @@ def z_score(x, mu, sigma):
     z = (x - mu)/sigma
     return z # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
 
+# Psuedocode: 
+# An algorithm that takes in a population item, the mean of that population and the standard deviation to return the z-score of the item
+# Get population item from user
+# Get mean of population from user
+# Get standard deviation from user
+# Set z equal to population item minus the population mean divided by the standard deviation
+# Return z	
+
 # Testing z_score function with all three populations and multiple use cases: 
 def test_case(pop):
     """Generic test function that takes in population data set and prints the mean, least element, and greatest element z-scores
@@ -140,4 +148,5 @@ For this population: [125, 475, 275, 550, 350, 325, 575, 25, 225, 150, 425, 75, 
 The z-score of the mean is:  0.0.
 The z-score of the least is:  -1.6712580435934667
 The z-score of the greatest is:  1.6712580435934667.
-"""
+"""	
+
