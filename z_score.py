@@ -90,6 +90,14 @@ def test_z_score_function():
 # participated in the group assignment work           #
 #######################################################
 
+# Psuedocode: 
+# An algorithm that takes in a population item, the mean of that population and the standard deviation to return the z-score of the item
+# Get population item from user
+# Get mean of population from user
+# Get standard deviation from user
+# Set z equal to population item minus the population mean divided by the standard deviation
+# Return z	
+
 def z_score(x, mu, sigma):
     """
     x is the population item    
@@ -104,14 +112,6 @@ def z_score(x, mu, sigma):
     # Your code goes between this comment and the return
     z = (x - mu)/sigma
     return z # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
-
-# Psuedocode: 
-# An algorithm that takes in a population item, the mean of that population and the standard deviation to return the z-score of the item
-# Get population item from user
-# Get mean of population from user
-# Get standard deviation from user
-# Set z equal to population item minus the population mean divided by the standard deviation
-# Return z	
 
 # Testing z_score function with all three populations and multiple use cases: 
 def test_case(pop):
