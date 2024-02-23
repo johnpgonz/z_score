@@ -133,6 +133,14 @@ test_case(population1)
 test_case(population2)
 test_case(population3)
 
+
+ourCase1 = [120, 135, 150, 165, 180, 195, 210, 225, 240, 255]
+
+ourCase2 = [95, 110, 125, 140, 155, 170, 185, 200, 215, 230]
+
+test_case(ourCase1)
+test_case(ourCase2)
+
 """test_case results:
 For this population: [14, 28, 96, 97, 21, 29, 29, 4, 58, 42, 25, 97, 49, 33, 75, 53, 14, 53, 45, 87, 75, 66, 62, 55, 57, 44, 44, 94, 19, 96, 12, 59, 86, 88, 61, 68, 37, 64, 19, 46, 68, 98, 19, 54, 65, 30, 1, 82, 76, 3]
 The z-score of the mean is:  0.0.
@@ -148,5 +156,16 @@ For this population: [125, 475, 275, 550, 350, 325, 575, 25, 225, 150, 425, 75, 
 The z-score of the mean is:  0.0.
 The z-score of the least is:  -1.6712580435934667
 The z-score of the greatest is:  1.6712580435934667.
+
+OUR TEST CASES
+For this population: [120, 135, 150, 165, 180, 195, 210, 225, 240, 255]
+The z-score of the mean is:  0.0.
+The z-score of the least is:  -1.5666989036012806
+The z-score of the greatest is:  1.5666989036012806.
+
+For this population: [95, 110, 125, 140, 155, 170, 185, 200, 215, 230]
+The z-score of the mean is:  0.0.
+The z-score of the least is:  -1.5666989036012806
+The z-score of the greatest is:  1.5666989036012806.
 """	
 
